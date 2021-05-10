@@ -4,16 +4,16 @@
     <div class="logo mt-5 text-center">
       <b-avatar src="https://placekitten.com/300/300" size="6rem"></b-avatar>
       <span>Meirambek</span>
-      <p>make202006@gmail.com</p>
+      <p>87472996261</p>
     </div>
     <div class="form">
       <b-form-input
-        v-model="text"
+        v-model="name"
         placeholder="Аты-жөніңіз"
         class="mb-2"
       ></b-form-input>
       <b-form-input
-        v-model="tel"
+        v-model="email"
         class="mb-2"
         type="tel"
         placeholder="Телефоныңыз"
@@ -26,7 +26,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+    }
+  },
+}
 </script>
 <style scoped>
 .container {
