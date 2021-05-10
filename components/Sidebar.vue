@@ -7,7 +7,7 @@
           <div class="profile-email text-center">make202006@gmail.com</div>
         </div>
         <div vertical class="menu">
-          <a href="addRoute" class="nav d-flex">
+          <a href="/addroute" class="nav d-flex">
             <font-awesome-icon
               class="menu-icon"
               :icon="['fas', 'house-user']"
@@ -19,7 +19,7 @@
             />
           </a>
 
-          <a href="profile" class="nav d-flex">
+          <a href="/profile" class="nav d-flex">
             <font-awesome-icon class="menu-icon" :icon="['fas', 'user-tie']" />
             <span class="menu-item-title"> Профиль</span>
             <font-awesome-icon
@@ -27,58 +27,7 @@
               :icon="['fas', 'arrow-right']"
             />
           </a>
-          <a class="nav d-flex">
-            <font-awesome-icon
-              class="menu-icon"
-              :icon="['fas', 'money-bill-alt']"
-            />
-            <span class="menu-item-title"> Төлем әдістері</span>
-            <font-awesome-icon
-              class="arrow ml-auto"
-              :icon="['fas', 'arrow-right']"
-            />
-          </a>
-          <a class="nav d-flex">
-            <font-awesome-icon
-              class="menu-icon"
-              :icon="['fas', 'clipboard-list']"
-            />
-            <span class="menu-item-title"> Тарих</span>
-            <font-awesome-icon
-              class="arrow ml-auto"
-              :icon="['fas', 'arrow-right']"
-            />
-          </a>
-          <a class="nav d-flex">
-            <font-awesome-icon
-              class="menu-icon"
-              :icon="['fas', 'map-marked-alt']"
-            />
-            <span class="menu-item-title"> Менің мекен жайларым</span>
-            <font-awesome-icon
-              class="arrow ml-auto"
-              :icon="['fas', 'arrow-right']"
-            />
-          </a>
-          <a class="nav d-flex">
-            <font-awesome-icon class="menu-icon" :icon="['fas', 'sliders-h']" />
-            <span class="menu-item-title"> Баптаулар</span>
-            <font-awesome-icon
-              class="arrow ml-auto"
-              :icon="['fas', 'arrow-right']"
-            />
-          </a>
-          <a class="nav d-flex">
-            <font-awesome-icon
-              class="menu-icon"
-              :icon="['fas', 'info-circle']"
-            />
-            <span class="menu-item-title"> Онлайн қолдау </span>
-            <font-awesome-icon
-              class="arrow ml-auto"
-              :icon="['fas', 'arrow-right']"
-            />
-          </a>
+
           <a class="nav d-flex">
             <font-awesome-icon
               class="menu-icon"
@@ -103,7 +52,6 @@ export default {}
 .container {
   max-width: 425px;
   width: 100%;
-  height: 100vh;
 }
 
 .profile-info {

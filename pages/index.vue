@@ -1,18 +1,13 @@
 <template>
-  <div class="container"></div>
+  <b-container class="container"> </b-container>
 </template>
 
 <script>
 export default {}
 </script>
-
-<style>
+<style scoped>
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  max-width: 425px;
+  width: 100%;
 }
 </style>

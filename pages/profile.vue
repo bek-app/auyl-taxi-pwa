@@ -1,6 +1,5 @@
 <template>
   <b-container class="container">
-    <Navbar />
     <div class="logo mt-5 text-center">
       <b-avatar src="https://placekitten.com/300/300" size="6rem"></b-avatar>
       <span>Meirambek</span>
@@ -16,12 +15,11 @@
         v-model="email"
         class="mb-2"
         type="tel"
-        placeholder="Телефоныңыз"
+        placeholder="Электронды почтаңыз"
       ></b-form-input>
     </div>
     <b-button class="mb-2" block> Сақтау</b-button>
     <Privacy />
-    <Sidebar />
   </b-container>
 </template>
 
