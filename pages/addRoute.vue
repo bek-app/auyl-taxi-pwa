@@ -8,12 +8,19 @@
     ></iframe> -->
 
     <b-form-input
+      class="mb-3"
       v-model="directionFrom"
       placeholder="Қай жерден?"
     ></b-form-input>
-    <b-form-input v-model="directionTo" placeholder="Қай жаққа?"></b-form-input>
-    <b-form-input v-model.number="price" placeholder="Бағасы"></b-form-input>
-    <b-button block variant="warning" @click="sendOrder">Жіберу</b-button>
+    <b-form-input
+      class="mb-3"
+      v-model="directionTo"
+      placeholder="Қай жаққа?"
+    ></b-form-input>
+
+    <b-button class="mb-3" block variant="warning" @click="sendOrder"
+      >Жіберу</b-button
+    >
   </b-container>
 </template>
 
@@ -23,17 +30,19 @@ export default {
     return {
       directionTo: '',
       directionFrom: '',
-      price: null,
     }
   },
+
   mounted() {},
   methods: {
     sendOrder() {
-      if (!this.directionTo || !this.directionFrom || !this.price) return
+      if (!this.directionTo || !this.directionFrom) return
       const payload = {
         directionTo: this.directionTo,
         directionFrom: this.directionFrom,
-        price: this.price,
+        clientPhoneNumber: 11111,
+        amount: 64,
+        dfvb: 45,
       }
       this.$store.dispatch('addroute/createOrder', payload)
     },

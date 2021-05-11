@@ -1,15 +1,23 @@
 export const state = () => ({
-  orders: [{ directionFrom: '', directionTo: '', price: null }],
+  orders: [
+    {
+      directionFrom: '',
+      directionTo: '',
+      clientPhoneNumber: 11111,
+      amount: 64,
+    },
+  ],
 })
 export const mutations = {}
 
 export const actions = {
-  async createOrder({ commit }, { payload }) {
-    await this.$axios.$post(
-      'https://us-central1-aul-taxi-server.cloudfunctions.net/app/orders',
-      {
-        payload,
-      }
-    )
+  async createOrder({ commit }, payload) {
+    try {
+      const resp = await this.$axios.$post('/api/app/orders', payload)
+      console.log(resp.data)
+    } catch (err) {
+      // Handle Error Here
+      console.error(err)
+    }
   },
 }
