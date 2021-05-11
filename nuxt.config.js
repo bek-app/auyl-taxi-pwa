@@ -37,12 +37,27 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+
+  axios: {
+    proxy: true,
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+  },
+
+  proxy: {
+    '/api/': {
+      target: 'https://us-central1-aul-taxi-server.cloudfunctions.net/',
+      pathRewrite: { '^/api/': '' },
+      changeOrigin: true,
+    },
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
