@@ -7,13 +7,15 @@
     </b-row>
     <b-row>
       <b-col class="mb-3">
-        <vue-tel-input v-model="phone" class="input"></vue-tel-input>
+        <vue-tel-input v-model.number="number" class="input"></vue-tel-input>
       </b-col>
     </b-row>
     <b-row>
-      <b-col class="mb-3"
-        ><b-button shadow-none class="btn" block variant="warning"
-          >Жалғастыру</b-button
+      <b-col class="mb-3">
+        <a href="/verifycode"
+          ><b-button shadow-none class="btn" block variant="warning"
+            >Жалғастыру</b-button
+          ></a
         >
       </b-col>
     </b-row>
@@ -53,6 +55,10 @@ export default {
 .btn:hover {
   background-color: #000;
   color: #fff;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
 }
 .btn:hover,
 .btn:focus,

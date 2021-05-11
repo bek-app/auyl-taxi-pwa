@@ -1,7 +1,7 @@
 <template>
   <b-container class="container">
     <div class="logo mt-5 text-center">
-      <b-avatar src="https://placekitten.com/300/300" size="6rem"></b-avatar>
+      <b-avatar src="https://placekittend.com/300/300" size="6rem"></b-avatar>
       <span>Meirambek</span>
       <p>87472996261</p>
     </div>
@@ -29,6 +29,7 @@ export default {
     return {
       name: '',
       email: '',
+      title: 'addRoute',
     }
   },
 }
